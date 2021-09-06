@@ -1,0 +1,52 @@
+print("TUGAS PELATIHAN CODING KONVERSI TEMPERATURE SUHU")
+
+suhu = input("Masukan suhu? (Misal: 65C, 88F, 110K, 64R): ")
+drjt = int(suhu[:-1])
+inputan = suhu[-1]
+
+#MENGHITUNG KONVERSI SUHU CELCIUS
+if inputan.upper() == "C":
+  hasil1 = float((9 * drjt) / 5 + 32)
+  hasil2 = float(drjt + 273.15)
+  hasil3 = float(4/5 * drjt)
+  suhuX = "Celcius"
+  suhu1 = "Fahrenheit"
+  suhu2 = "Kelvin"
+  suhu3 = "Reamur"
+                
+#MENGITUNG KONVERSI SUHU REAMUR
+elif inputan.upper() == "R":
+  hasil1 = float((5/4) * drjt)
+  hasil2 = float((9/4 * drjt) + 32)
+  hasil3 = float((5/4 * drjt) + 273)
+  suhuX = "Reamur"
+  suhu1 = "Celcius"
+  suhu2 = "Fahrenheit"
+  suhu3 = "Kelvin"
+
+#MENGHITUNG KONVERSI SUHU KELVIN
+elif inputan.upper() == "K":
+  hasil1 = float(drjt - 273.15)
+  hasil2 = float(((drjt - 273.15) * 9 / 5)+32)
+  hasil3 = float(4/5 * (drjt-273))
+  suhuX = "Kelvin"
+  suhu1 = "Celcius"
+  suhu2 = "Fahrenheit"
+  suhu3 = "Reamur"
+
+ #MENGHITUNG KONVERSI SUHU FAHRENHEIT               
+elif inputan.upper() == "F":
+  hasil1 = float((drjt - 32) * 5 / 9)
+  hasil2 = float(((drjt - 32) * 5 / 9) + 273.15)
+  hasil3 = float(4/9 * (drjt-32))
+  suhuX = "Fahrenheit"
+  suhu1 = "Celsius"
+  suhu2 = "Kelvin"
+  suhu3 = "Reamur"
+
+else:
+   print("Inputan tidak sesuai!! Perhatikan Penulisan Input")
+
+print(drjt,suhuX,"=","{:.1f}".format(hasil1),suhu1)
+print(drjt,suhuX,"=","{:.1f}".format(hasil2),suhu2)
+print(drjt,suhuX,"=","{:.1f}".format(hasil3),suhu3)
