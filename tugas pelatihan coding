@@ -1,4 +1,4 @@
-print("TUGAS PELATIHAN CODING KONVERSI TEMPERATURE SUHU")
+print("TUGAS PELATIHAN CODING KONVERSI SUHU")
 
 suhu = input("Masukan suhu? (Misal: 65C, 88F, 110K, 64R): ")
 drjt = int(suhu[:-1])
